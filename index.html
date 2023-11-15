@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Data Seminar TA</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fceff7; /* Warna latar belakang */
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: left;
+      align-items: left;
+      height: 50vh;
+    }
+
+    form {
+      background-color: #ffe6f2; /* Warna latar belakang formulir */
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #ff66b2; /* Warna label */
+    }
+
+    input[type="nim"],
+    input[type="nama"],
+    input[type="prodi"],
+    input[type="date"],
+    input[type="jam_seminar"],
+    input[type="ruangan"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+      border: 1px solid #ff66b2; /* Warna border input */
+      border-radius: 4px;
+    }
+
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+      border: 1px solid #ff66b2; /* Warna border input */
+      border-radius: 4px;
+    }
+
+    input[type="submit"] {
+      background-color: #ff66b2; /* Warna tombol submit */
+      color: #fff; /* Warna teks tombol submit */
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #ff3385; /* Warna tombol submit saat dihover */
+    }
+
+    .container-input {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <fieldset style="padding: 1rem;">
+      <legend>
+        Form Daftar Seminar TA
+      </legend>
+      <div style="display: flex; gap: 5rem;">
+        <div>
+          <div class="container-input">
+            <label for="nim">NIM:</label>
+            <input type="nim" id="NIM" name="NIM" required>
+          </div>
+    
+          <div class="container-input">
+            <label for="nama">Nama:</label>
+            <input type="nama" id="Nama" name="Nama" required>
+          </div>
+    
+          <div class="container-input">
+            <label for="prodi">Prodi:</label>
+            <select id="prodi" name="prodi" required>
+              <option value="SI">Sistem Informasi</option>
+              <option value="TI">Teknik Informatika</option>
+              <option value="BD">Bisnis Digital</option>
+            </select>
+          </div>
+    
+          <div class="container-input">
+            <label for="tanggal">Pilih Tanggal:</label>
+            <input type="date" id="tanggal" name="tanggal">
+          </div>
+    
+          <div class="container-input">
+            <div class="date-container">
+              <div class="date" id="currentDate"></div>
+              <div class="day" id="currentDay"></div>
+            </div>
+          </div>
+    
+          <div class="container-input"> 
+            <label for="jam_seminar">Jam Seminar:</label>
+            <input type="jam_seminar" id="jam_seminar" name="jam_seminar" required>
+          </div>
+    
+          <div class="container-input">
+            <label for="ruangan">Ruangan:</label>
+            <input type="ruangan" id="ruangan" name="ruangan" required>
+          </div>
+        </div>
+    
+        <div>
+          <div class="container-input">
+            <label for="judul_ta">Judul TA:</label>
+            <textarea id="judul_ta" id="judul_ta" name="judul_ta" rows="4" required></textarea>
+          </div>
+          
+          <div class="container-input">
+            <label for="seminar">Seminar:</label>
+            <select id="seminar" name="seminar" required>
+              <option value="proposal">Proposal</option>
+              <option value="kemajuan">Kemajuan</option>
+              <option value="hasil">Hasil</option>
+              <option value="uji_publik">Uji Publik</option>
+              <option value="internasional">Internasional</option>
+              <option value="kolaboratif">Kolaboratif</option>
+              <option value="online">Online</option>
+            </select>
+          </div>
+      
+          <div class="container-input">
+            <label for="pembimbing">Pembimbing:</label>
+            <select id="pembimbing" name="pembimbing" required>
+              <option value="sirojul_munir">Sirojul Munir S.Si, M.Kom</option>
+              <option value="misna_asqia">Misna Asqia M.Kom</option>
+              <option value="rusmanto">Drs. Rusmanto M.M</option>
+              <option value="lukman_rosyidi">Dr. Lukman Rosyidi S.T, M.M, M.M</option>
+            </select>
+          </div>
+      
+          <div class="container-input">
+            <label for="penguji_1">Penguji 1:</label>
+            <select id="penguji_1" name="penguji_1" required>
+              <option value="ahmad_rio">Ahmad Rio M.Si</option>
+            </select>
+          </div>
+      
+          <div class="container-input">
+            <label for="penguji_2">Penguji 2:</label>
+            <select id="penguji_2" name="penguji 2" required>
+              <option value="amalia_rahmah">Amalia Rahmah M.T</option>
+            </select>
+          </div>
+        </div>
+      </div>
+  
+      <div>
+        <input type="submit" value="Update"> 
+        <input type="submit" value="Delete">
+      </div>
+    </fieldset>
+  </form>
+</body>
+</html>
